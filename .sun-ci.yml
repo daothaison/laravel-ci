@@ -30,14 +30,7 @@ jobs:
     image: alpine
     script:
       - sleep 10
-    except:
-      branch:
-        - master
-  test1:
-    stage: build
-    image: alpine
-    script:
-      - sleep 10
+      - echo 'except develop'
     except:
       branch:
         - develop
@@ -56,4 +49,4 @@ jobs:
       - sleep 10
     except:
       branch:
-- develop
+        - develop
